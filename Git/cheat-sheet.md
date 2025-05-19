@@ -1,6 +1,6 @@
-# 📄 `.gitignore` Cheat Sheet
+# `.gitignore` Cheat Sheet
 
-## 🔹 Basic Patterns
+## Basic Patterns
 
 | Pattern | Meaning                                                                  |
 | ------- | ------------------------------------------------------------------------ |

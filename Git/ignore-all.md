@@ -1,10 +1,8 @@
----
-## 🔍 Understanding the Difference Between `*` and `/*` in `.gitignore`
+## Understanding the Difference Between `*` and `/*` in `.gitignore`
 
 When configuring your `.gitignore` file, the difference between `*` and `/*` is subtle but important. Both are used to **ignore files and folders**, but they behave differently depending on their placement and syntax.
----
 
-### ✅ `*` — Ignore Everything Recursively
+### `*` — Ignore Everything Recursively
 
 ```gitignore
 *
@@ -13,7 +11,7 @@ When configuring your `.gitignore` file, the difference between `*` and `/*` is 
 - Ignores **all files and folders**, at **all levels** of the directory tree.
 - This includes files in subfolders, nested directories, and so on.
 
-#### ✅ Example Matches:
+#### Example Matches:
 
 - `README.md`
 - `src/`
@@ -25,7 +23,7 @@ This is a **recursive catch-all**.
 
 ---
 
-### ✅ `/*` — Ignore Only Root-Level Files and Folders
+### `/*` — Ignore Only Root-Level Files and Folders
 
 ```gitignore
 /*
@@ -34,28 +32,28 @@ This is a **recursive catch-all**.
 - Ignores **only** the files and folders located at the **root** of your repository.
 - Does **not** ignore contents inside subdirectories (unless the subdirectory itself is excluded).
 
-#### ✅ Example Matches:
+#### Example Matches:
 
 - `README.md`
 - `src/` _(the folder itself)_
 
-#### ❌ Example Non-Matches:
+#### Example Non-Matches:
 
 - `src/main.js` _(inside the folder — still visible)_
 - `dist/playground.user.js`
 
 ---
 
-### 🆚 Summary Table
+### Summary Table
 
 | Pattern | Ignores               | Recursive? | Use Case                                           |
 | ------- | --------------------- | ---------- | -------------------------------------------------- |
-| `*`     | All files and folders | ✅ Yes     | Ignore everything in the repo                      |
-| `/*`    | Only root-level items | ❌ No      | Ignore just the top-level, keep subfolder contents |
+| `*`     | All files and folders | Yes        | Ignore everything in the repo                      |
+| `/*`    | Only root-level items | No         | Ignore just the top-level, keep subfolder contents |
 
 ---
 
-### 🧠 Pro Tip
+### Pro Tip
 
 To ignore root files but **keep subfolders tracked**, combine patterns:
 
