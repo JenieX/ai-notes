@@ -68,3 +68,61 @@ This tells Git to:
 - But unignore folders (so you can still include files inside them explicitly).
 
 ---
+
+### My examples
+
+#### Example 1
+
+```gitignore
+/*
+!package.json
+!playground/
+# !playground/README.md
+# !playground/playground/playground.user.js
+
+# # This file will include:
+# - package.json
+# - playground/README.md
+# - playground/dist/playground.bundle.js
+# - playground/dist/playground.dev.js
+# - playground/dist/playground.meta.js
+# - playground/dist/playground.source.map
+# - playground/dist/playground.user.js
+# - playground/index.ts
+# - playground/metadata.jsonc
+# - playground/tsconfig.json
+```
+
+#### Example 2
+
+```gitignore
+/*
+!package.json
+!playground/
+playground/*
+!playground/README.md
+!playground/dist/
+playground/dist/*
+!playground/dist/playground.user.js
+
+# # This file will include:
+# - package.json
+# - playground/README.md
+# - playground/dist/playground.user.js
+```
+
+#### Example 3
+
+```gitignore
+*
+!package.json
+!playground/
+!playground/README.md
+!playground/dist/
+!playground/dist/playground.user.js
+
+# # This file will include:
+# - package.json
+# - playground/README.md
+# - playground/dist/playground.user.js
+```
