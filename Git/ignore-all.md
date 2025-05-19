@@ -71,14 +71,14 @@ This tells Git to:
 
 ### My examples
 
-#### Example 1
+#### Example #1 using `/*`
 
 ```gitignore
 /*
 !package.json
 !playground/
 # !playground/README.md
-# !playground/playground/playground.user.js
+# !playground/dist/playground.user.js
 
 # # This file will include:
 # - package.json
@@ -93,7 +93,7 @@ This tells Git to:
 # - playground/tsconfig.json
 ```
 
-#### Example 2
+#### Example #2 using `/*`
 
 ```gitignore
 /*
@@ -111,7 +111,20 @@ playground/dist/*
 # - playground/dist/playground.user.js
 ```
 
-#### Example 3
+#### Example #3 using `*`
+
+```gitignore
+*
+!package.json
+!playground/
+# !playground/README.md
+# !playground/dist/playground.user.js
+
+# # This file will include:
+# - package.json
+```
+
+#### Example #4 using `*`
 
 ```gitignore
 *
